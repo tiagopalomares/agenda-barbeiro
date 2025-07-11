@@ -1,0 +1,48 @@
+### Listar todos os agendamentos
+GET http://localhost:8080/agendamentos HTTP/1.1
+
+### Criar um novo agendamento
+POST http://localhost:8080/agendamentos HTTP/1.1
+Content-Type: application/json
+
+{
+    "nomeCliente": "Fernanda Lima",
+    "telefoneCliente": "9988776655",
+    "servico": "Mechas e Hidratação",
+    "dataAgendamento": "2025-07-25",
+    "horaAgendamento": "16:00:00",
+    "concluido": false
+}
+
+
+### Criar um novo agendamento
+POST http://localhost:8080/agendamentos HTTP/1.1
+Content-Type: application/json
+
+{
+    "nomeCliente": "Tiago Freire",
+    "telefoneCliente": "11953397591",
+    "servico": "cabelo",
+    "dataAgendamento": "2025-07-11",
+    "horaAgendamento": "15:30:00",
+    "concluido": false
+}
+
+### Atualizar Agendamento por ID
+PUT http://localhost:8080/agendamentos/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": 1,
+    "nomeCliente": "Nome Atualizado Exemplo",
+    "telefoneCliente": "98765432109",
+    "servico": "Corte e Barba VIP",
+    "dataAgendamento": "2025-07-12",
+    "horaAgendamento": "11:00:00",
+    "concluido": true
+}
+ 
+### Deletar Agendamento por ID
+
+DELETE http://localhost:8080/agendamentos/2 HTTP/1.1
+
